@@ -158,7 +158,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
-
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport.vendor \
@@ -166,6 +165,10 @@ PRODUCT_PACKAGES += \
 
 # GSI
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
+# GPS
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Initialization
 PRODUCT_COPY_FILES += \
