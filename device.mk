@@ -206,5 +206,11 @@ $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
+# Update Engine
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
 # Vendor
 $(call inherit-product, vendor/xiaomi/milahaina/milahaina-vendor.mk)
