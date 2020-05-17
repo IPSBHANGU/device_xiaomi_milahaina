@@ -27,7 +27,8 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon \
     SystemUIResCommon \
     TelephonyResCommon \
-    WifiResCommon
+    WifiResCommon \
+    PanelRateConfig
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
