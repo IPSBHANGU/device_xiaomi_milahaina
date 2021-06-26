@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon \
-    PanelRateConfig
+    PanelRateConfig \
+    MilahainaSystemUI
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
