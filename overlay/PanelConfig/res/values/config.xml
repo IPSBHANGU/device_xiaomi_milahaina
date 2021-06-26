@@ -482,7 +482,14 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string name="config_mainBuiltInDisplayCutout">M 0,0 H -31 V 80 H 31 V 0 H 0 Z</string>
+    <string name="config_mainBuiltInDisplayCutout">
+        M 0,0
+        H -31
+        V 80
+        H 31
+        V 0
+        H 0 Z
+    </string>
 
     <!-- Vibrator pattern for feedback about a long screen/key press. -->
     <integer-array name="config_longPressVibePattern">
