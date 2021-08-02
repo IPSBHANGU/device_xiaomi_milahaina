@@ -93,6 +93,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
+# Boot Control
+PRODUCT_PACKAGES += \
+    bootctrl.lahaina \
+    bootctrl.lahaina.recovery
+
 # Consumer IR
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
