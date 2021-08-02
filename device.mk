@@ -193,9 +193,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # USB
+TARGET_HAS_DIAG_ROUTER := true
+TARGET_KERNEL_VERSION := 5.4
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
-TARGET_HAS_DIAG_ROUTER := true
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/milahaina/milahaina-vendor.mk)
