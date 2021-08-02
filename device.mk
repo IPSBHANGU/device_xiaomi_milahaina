@@ -143,5 +143,8 @@ PRODUCT_PACKAGES += \
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# USB
+$(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
+
 # Vendor
 $(call inherit-product, vendor/xiaomi/milahaina/milahaina-vendor.mk)
