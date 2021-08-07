@@ -304,6 +304,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# System Helper
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.systemhelper@1.0.vendor
+
 # USB
 TARGET_HAS_DIAG_ROUTER := true
 TARGET_KERNEL_VERSION := 5.4
