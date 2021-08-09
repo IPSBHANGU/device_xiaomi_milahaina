@@ -377,7 +377,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # WFD
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
 PRODUCT_PACKAGES += \
+    libnl \
     libwfdaac_vendor
 
 # WiFi
