@@ -150,7 +150,6 @@ vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec.xml
 vendor/etc/audio/sku_lahaina/mixer_paths.xml
 vendor/etc/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml
 vendor/etc/audio/sku_lahaina/mixer_paths_overlay_static.xml
-vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml
 vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml
 vendor/etc/audio_tuning_mixer.txt
 
