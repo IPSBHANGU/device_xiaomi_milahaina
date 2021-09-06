@@ -1,0 +1,286 @@
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on early-boot
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.xiaomi.early_boot.sh
+
+on fs
+    mkdir /mnt/vendor/persist/audio 0755 system system
+
+on post-fs-data
+    # Audio
+    chown system audio /mnt/vendor/persist/audio/rcv_cal_val
+    chown system audio /mnt/vendor/persist/audio/spk_cal_val
+
+    # Create directory used by audio cit
+    mkdir /data/vendor/cit 0770 system system
+
+    #Create dir for dolby
+    mkdir /data/vendor/dolby 0770 media media
+
+    # Mi
+    chmod 0666 /dev/migt
+    restorecon /dev/migt
+    chmod 0777 /sys/module/migt/parameters/migt_freq
+    restorecon /sys/module/migt/parameters/migt_freq
+    chmod 0777 /sys/module/migt/parameters/migt_ms
+    restorecon /sys/module/migt/parameters/migt_ms
+    chmod 0777 /sys/module/migt/parameters/migt_thresh
+    restorecon /sys/module/migt/parameters/migt_thresh
+    chmod 0777 /sys/module/migt/parameters/boost_policy
+    restorecon /sys/module/migt/parameters/boost_policy
+    chmod 0777 /sys/module/migt/parameters/fps_variance_ratio
+    restorecon /sys/module/migt/parameters/fps_variance_ratio
+    chmod 0777 /sys/module/migt/parameters/super_task_max_num
+    restorecon /sys/module/migt/parameters/super_task_max_num
+    chmod 0777 /sys/module/migt/parameters/migt_ceiling_freq
+    restorecon /sys/module/migt/parameters/migt_ceiling_freq
+    chmod 0777 /sys/module/migt/parameters/stask_candidate_num
+    restorecon /sys/module/migt/parameters/stask_candidate_num
+    chmod 0666 /sys/module/migt/parameters/mi_viptask
+    restorecon /sys/module/migt/parameters/mi_viptask
+
+    mkdir /data/vendor/misc/display 0771 system system
+
+    chown root system /sys/module/migt/parameters/add_lclus_affinity_uidlist
+    chmod 0664 /sys/module/migt/parameters/add_lclus_affinity_uidlist
+    chown root system /sys/module/migt/parameters/del_lclus_affinity_uidlist
+    chmod 0664 /sys/module/migt/parameters/del_lclus_affinity_uidlist
+    chown root system /sys/module/migt/parameters/add_mclus_affinity_uidlist
+    chmod 0664 /sys/module/migt/parameters/add_mclus_affinity_uidlist
+    chown root system /sys/module/migt/parameters/del_mclus_affinity_uidlist
+    chmod 0664 /sys/module/migt/parameters/del_mclus_affinity_uidlist
+    chown root system /sys/module/migt/parameters/add_bclus_affinity_uidlist
+    chmod 0664 /sys/module/migt/parameters/add_bclus_affinity_uidlist
+    chown root system /sys/module/migt/parameters/del_bclus_affinity_uidlist
+    chmod 0664 /sys/module/migt/parameters/del_bclus_affinity_uidlist
+    chown root system /sys/module/migt/parameters/reset_clus_affinity_uidlist
+    chmod 0664 /sys/module/migt/parameters/reset_clus_affinity_uidlist
+
+    # Torch
+    chown system system /sys/class/leds/led:torch_0/brightness
+    chown system system /sys/class/leds/led:torch_1/brightness
+    chown system system /sys/class/leds/led:torch_2/brightness
+    chown system system /sys/class/leds/led:torch_3/brightness
+    chown system system /sys/class/leds/led:flash_0/brightness
+    chown system system /sys/class/leds/led:flash_1/brightness
+    chown system system /sys/class/leds/led:flash_2/brightness
+    chown system system /sys/class/leds/led:flash_3/brightness
+    chown system system /sys/class/leds/led:switch_0/brightness
+    chown system system /sys/class/leds/led:switch_1/brightness
+    chown system system /sys/class/leds/led:switch_2/brightness
+    chown system system /sys/class/leds/led:switch_3/brightness
+    chown system system /sys/class/leds/led:switch_0/trigger
+    chown system system /sys/class/leds/led:switch_1/trigger
+    chown system system /sys/class/leds/led:switch_2/trigger
+    chown system system /sys/class/leds/led:switch_3/trigger
+    chown system system /sys/class/leds/flashlight/brightness
+
+    chmod 0664 /sys/class/leds/led:torch_0/brightness
+    chmod 0664 /sys/class/leds/led:torch_1/brightness
+    chmod 0664 /sys/class/leds/led:torch_2/brightness
+    chmod 0664 /sys/class/leds/led:torch_3/brightness
+    chmod 0664 /sys/class/leds/led:flash_0/brightness
+    chmod 0664 /sys/class/leds/led:flash_1/brightness
+    chmod 0664 /sys/class/leds/led:flash_2/brightness
+    chmod 0664 /sys/class/leds/led:flash_3/brightnesssss
+    chmod 0664 /sys/class/leds/led:switch_0/brightness
+    chmod 0664 /sys/class/leds/led:switch_1/brightness
+    chmod 0664 /sys/class/leds/led:switch_2/brightness
+    chmod 0664 /sys/class/leds/led:switch_3/brightness
+    chmod 0664 /sys/class/leds/led:switch_0/trigger
+    chmod 0664 /sys/class/leds/led:switch_1/trigger
+    chmod 0664 /sys/class/leds/led:switch_2/trigger
+    chmod 0664 /sys/class/leds/led:switch_3/trigger
+    chmod 0664 /sys/class/leds/flashlight/brightness
+
+    chmod 0644 /dev/elliptic0
+    chmod 0644 /dev/elliptic1
+    chmod 0660 /dev/ir_spi
+    chown system system /dev/ir_spi
+    mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
+    mkdir /data/vendor/wlan_logs 0777 root shell
+    mkdir /data/vendor/nfc 0777 nfc nfc
+    mkdir /mnt/vendor/persist/qxwz 0770 gps system
+    mkdir /data/vendor/qxwz 0770 gps system
+    chmod 0660 /dev/al6021
+    chown system camera /dev/al6021
+
+on charger
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+
+on property:sys.boot_completed=1
+    mkdir /data/vendor/camera/model 0777 cameraserver audio
+    mkdir /data/vendor/camera/model/rt_model 0777 cameraserver audio
+    copy /vendor/etc/camera/model/rt_model/preview_model /data/vendor/camera/model/rt_model/preview_model
+    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_model
+    chmod 0777 /data/vendor/camera/model/rt_model/preview_model
+    copy /vendor/etc/camera/model/rt_model/preview_cache /data/vendor/camera/model/rt_model/preview_cache
+    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_cache
+    chmod 0777 /data/vendor/camera/model/rt_model/preview_cache
+    copy /vendor/etc/camera/model/rt_model/preview_policy /data/vendor/camera/model/rt_model/preview_policy
+    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_policy
+    chmod 0777 /data/vendor/camera/model/rt_model/preview_policy
+    mkdir /data/vendor/camera/model/dof_model 0777 cameraserver audio
+    copy /vendor/etc/camera/model/dof_model/capture_cache /data/vendor/camera/model/dof_model/capture_cache
+    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_cache
+    chmod 0777 /data/vendor/camera/model/dof_model/capture_cache
+    copy /vendor/etc/camera/model/dof_model/capture_model /data/vendor/camera/model/dof_model/capture_model
+    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_model
+    chmod 0777 /data/vendor/camera/model/dof_model/capture_model
+    copy /vendor/etc/camera/model/dof_model/capture_policy /data/vendor/camera/model/dof_model/capture_policy
+    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_policy
+    chmod 0777 /data/vendor/camera/model/dof_model/capture_policy
+    #####copy fusion models#####
+    mkdir /data/vendor/camera/fusion_models 0777 cameraserver audio
+    copy /vendor/etc/camera/fusion_models/fusion_cache /data/vendor/camera/fusion_models/fusion_cache
+    chown cameraserver audio  /data/vendor/camera/fusion_models/fusion_cache
+    chmod 0777 /data/vendor/camera/fusion_models/fusion_cache
+    copy /vendor/etc/camera/fusion_models/fusion_model /data/vendor/camera/fusion_models/fusion_model
+    chown cameraserver audio  /data/vendor/camera/fusion_models/fusion_model
+    chmod 0777 /data/vendor/camera/fusion_models/fusion_model
+    copy /vendor/etc/camera/fusion_models/fusion_policy /data/vendor/camera/fusion_models/fusion_policy
+    chown cameraserver audio  /data/vendor/camera/fusion_models/fusion_policy
+    chmod 0777 /data/vendor/camera/fusion_models/fusion_policy
+
+on property:vendor.audio.cit.spkcal.copy=true
+    copy /data/vendor/cit/cs35l41_cal.bin /mnt/vendor/persist/audio/cs35l41_cal.bin
+    copy /data/vendor/cit/cs35l41_cal_right.bin /mnt/vendor/persist/audio/cs35l41_cal_right.bin
+    copy /data/vendor/cit/cs35l41_cal.txt /mnt/vendor/persist/audio/cs35l41_cal.txt
+    copy /data/vendor/cit/cs35l41_cal_right.txt /mnt/vendor/persist/audio/cs35l41_cal_right.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_right.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_right.txt
+    copy /data/vendor/cit/tfa9894_chk.txt /mnt/vendor/persist/audio/tfa9894_chk.txt
+    chmod 666 /mnt/vendor/persist/audio/tfa9894_chk.txt
+    copy /data/vendor/cit/cs35l45_cal_mt.bin /mnt/vendor/persist/audio/cs35l45_cal_mt.bin
+    copy /data/vendor/cit/cs35l45_cal_md.bin /mnt/vendor/persist/audio/cs35l45_cal_md.bin
+    copy /data/vendor/cit/cs35l45_cal_ft.bin /mnt/vendor/persist/audio/cs35l45_cal_ft.bin
+    copy /data/vendor/cit/cs35l45_cal_fd.bin /mnt/vendor/persist/audio/cs35l45_cal_fd.bin
+    copy /data/vendor/cit/cs35l45_cal_mt.txt /mnt/vendor/persist/audio/cs35l45_cal_mt.txt
+    copy /data/vendor/cit/cs35l45_cal_md.txt /mnt/vendor/persist/audio/cs35l45_cal_md.txt
+    copy /data/vendor/cit/cs35l45_cal_ft.txt /mnt/vendor/persist/audio/cs35l45_cal_ft.txt
+    copy /data/vendor/cit/cs35l45_cal_fd.txt /mnt/vendor/persist/audio/cs35l45_cal_fd.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_mt.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_md.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_ft.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_fd.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_mt.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_md.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_ft.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_fd.txt
+
+on boot
+    #Display feature sysfs node
+    chown system system /sys/class/mi_display/disp-DSI-0/disp_param
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/disp_param
+    chown system system /sys/class/mi_display/disp-DSI-0/mipi_rw
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/mipi_rw
+    chown system system /sys/class/mi_display/disp-DSI-0/panel_info
+    chmod 0444 /sys/class/mi_display/disp-DSI-0/panel_info
+    chown system system /sys/class/mi_display/disp-DSI-0/wp_info
+    chmod 0444 /sys/class/mi_display/disp-DSI-0/wp_info
+    chown system system /sys/class/mi_display/disp-DSI-0/dynamic_fps
+    chmod 0444 /sys/class/mi_display/disp-DSI-0/dynamic_fps
+    chown system system /sys/class/mi_display/disp-DSI-0/doze_brightness
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/doze_brightness
+    chown system system /sys/class/mi_display/disp-DSI-0/disp_count
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/disp_count
+    chown system system /sys/class/mi_display/disp-DSI-1/disp_count
+    chmod 0664 /sys/class/mi_display/disp-DSI-1/disp_count
+    chown system system /sys/class/mi_display/disp-DSI-0/brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/brightness_clone
+    chown system system /sys/class/mi_display/disp-DSI-1/dynamic_fps
+    chmod 0444 /sys/class/mi_display/disp-DSI-1/dynamic_fps
+
+    #touch funtions permissions setting
+    chown system system /sys/class/touch/touch_dev/palm_sensor
+    chmod 0664 /sys/class/touch/touch_dev/palm_sensor
+    chmod 0666 /dev/stmvl53l5
+    chown system system /dev/stmvl53l5
+    write /sys/block/sda/queue/wbt_lat_usec 75000
+
+    #chown/chmod input_suspend node as needed from mishow service
+    chown system system /sys/class/qcom-battery/input_suspend
+    chmod 774 /sys/class/qcom-battery/input_suspend
+
+    #ufscld functions permission
+    chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/auto_hibern8_enable
+    chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/block_suspend
+    chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/cld_operation_status
+    chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/debug
+    chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/frag_level
+    chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/trigger
+    chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/trigger_interval
+    chmod 664 /sys/devices/platform/soc/1d84000.ufshc/ufscld/trigger
+
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    chown system system /sys/class/thermal/thermal_message/balance_mode
+
+    # modem for at command
+    chmod 0777 /dev/smd8
+    chown radio radio /dev/smd8
+
+    #Create persist for camera calibration data
+    mkdir /mnt/vendor/persist/camera 0755 system cameraserver
+
+service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
+    override
+    class hal
+    user audioserver
+    # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
+    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
+    capabilities BLOCK_SUSPEND
+    ioprio rt 4
+    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
+    socket audio_hw_socket seqpacket 0666 system system
+    onrestart restart audioserver
+
+service vendor.camera-provider-2-4 /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
+    override
+    interface android.hardware.camera.provider@2.4::ICameraProvider legacy/0
+    interface vendor.qti.hardware.camera.postproc@1.0::IPostProcService camerapostprocservice
+    interface vendor.xiaomi.hardware.campostproc@1.0::IMiPostProcService default
+    interface vendor.xiaomi.hardware.cameraperf@1.0::IMiCameraPerfService default
+    class hal
+    user cameraserver
+    group audio camera input drmrpc oem_2907
+    ioprio rt 4
+    capabilities SYS_NICE
+    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
+    writepid /dev/memcg/camera/provider/cgroup.procs
+
+service displayfeature /vendor/bin/displayfeature
+    class late_start
+    user root
+    group root
+
+on property:init.svc.surfaceflinger=stopped
+    stop displayfeature
+
+on property:init.svc.surfaceflinger=running
+    start displayfeature
+
+on property:init.svc.surfaceflinger=restarting
+    stop displayfeature
+
+service displaycount /vendor/bin/displaycount
+    class late_start
+    user system
+    group system
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start displaycount
+
+service vendor.nv_mac /vendor/bin/nv_mac
+    class late_start
+    user system
+    group system inet net_admin wifi net_raw
+    oneshot
