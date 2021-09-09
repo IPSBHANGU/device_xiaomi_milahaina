@@ -193,7 +193,6 @@ PRODUCT_PACKAGES += \
     init.xiaomi.recovery.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
     init.target.rc \
