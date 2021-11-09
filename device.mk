@@ -224,7 +224,7 @@ PRODUCT_PACKAGES += \
 
 # NFC
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
-$(call inherit-product, vendor/nxp/opensource/pn5xx/halimpl/nfc_vendor_product.mk)
+$(call inherit-product, vendor/nxp/opensource/sn100x/halimpl/nfc_vendor_product.mk)
 
 TARGET_USES_NQ_NFC := true
 
@@ -240,7 +240,7 @@ PRODUCT_PACKAGES += \
     vendor.nxp.nxpnfc@1.0.vendor
 
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/pn5xx
+    vendor/nxp/opensource/sn100x
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
