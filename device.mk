@@ -195,7 +195,8 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sh \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    ueventd.milahaina.rc
 
 # Keymaster
 PRODUCT_COPY_FILES += \
