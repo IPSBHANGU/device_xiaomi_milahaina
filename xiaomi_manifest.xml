@@ -1,0 +1,25 @@
+<!--
+     Copyright (C) 2021 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest version="1.0" type="device">
+    <!-- Camera -->
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.campostproc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMiPostProcService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.cameraperf</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMiCameraPerfService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>

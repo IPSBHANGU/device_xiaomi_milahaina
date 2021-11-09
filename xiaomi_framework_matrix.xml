@@ -1,0 +1,47 @@
+<!--
+     Copyright (C) 2021 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<compatibility-matrix version="2.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.citsensorservice</name>
+        <version>1.1</version>
+        <interface>
+            <name>ICitSensorService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Camera -->
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.cameraperf</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMiCameraPerfService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.campostproc</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMiPostProcService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.displayfeature</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayFeature</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.mlipay</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IMlipayService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
