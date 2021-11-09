@@ -87,6 +87,9 @@ DEVICE_MANIFEST_FILE := \
 DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/compatibility_matrix.xml
 
+ODM_MANIFEST_SKUS := haydnpro
+ODM_MANIFEST_HAYDNPRO_FILES := $(DEVICE_PATH)/haydnpro_manifest.xml
+
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \
