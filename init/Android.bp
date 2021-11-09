@@ -10,6 +10,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.xiaomi.camera.rc",
+    src: "init.xiaomi.camera.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.xiaomi.recovery.rc",
     src: "init.xiaomi.recovery.rc",
     sub_dir: "init",
@@ -28,6 +35,14 @@ prebuilt_etc {
     src: "init.target.rc",
     sub_dir: "init/hw",
     vendor: true,
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_bspcam_interface",
+    interfaces: [
+        "vendor.xiaomi.hardware.campostproc@1.0::IMiPostProcService",
+        "vendor.xiaomi.hardware.cameraperf@1.0::IMiCameraPerfService",
+    ],
 }
 
 sh_binary {
