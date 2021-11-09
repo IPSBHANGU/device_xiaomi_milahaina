@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "PanelRateConfig",
+    name: "PanelConfig",
     product_specific: true,
 }

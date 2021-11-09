@@ -28,7 +28,7 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon \
-    PanelRateConfig \
+    PanelConfig \
     MilahainaSystemUI
 
 # Partitions
