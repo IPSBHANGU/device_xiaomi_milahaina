@@ -78,19 +78,19 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/xiaomi_framework_matrix.xml \
-    $(DEVICE_PATH)/device_framework_matrix.xml \
+    $(DEVICE_PATH)/hidl/xiaomi_framework_matrix.xml \
+    $(DEVICE_PATH)/hidl/device_framework_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
-    $(DEVICE_PATH)/xiaomi_manifest.xml \
-    $(DEVICE_PATH)/manifest.xml
+    $(DEVICE_PATH)/hidl/xiaomi_manifest.xml \
+    $(DEVICE_PATH)/hidl/manifest.xml
 
 DEVICE_MATRIX_FILE := \
-    $(DEVICE_PATH)/compatibility_matrix.xml
+    $(DEVICE_PATH)/hidl/compatibility_matrix.xml
 
 ODM_MANIFEST_SKUS := haydnpro
-ODM_MANIFEST_HAYDNPRO_FILES := $(DEVICE_PATH)/haydnpro_manifest.xml
+ODM_MANIFEST_HAYDNPRO_FILES := $(DEVICE_PATH)/hidl/haydnpro_manifest.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
