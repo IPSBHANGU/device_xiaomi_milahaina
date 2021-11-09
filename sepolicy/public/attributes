@@ -1,0 +1,8 @@
+# Citsensorservice
+hal_attribute(citsensorservice)
+
+# Display Feature
+hal_attribute(displayfeature)
+
+# Mlipay
+hal_attribute(mlipay)

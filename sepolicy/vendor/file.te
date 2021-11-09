@@ -1,0 +1,26 @@
+# Ultrasound Socket
+type audio_socket, file_type;
+
+# Camera
+type vendor_proc_camera, fs_type, proc_type;
+
+# Display
+type vendor_proc_graphics, fs_type, proc_type;
+
+# EVT
+type vendor_proc_evt, fs_type, proc_type;
+
+# Fingerprint
+type vendor_fpc_data_file, file_type, data_file_type;
+
+# IR
+type lirc_device, dev_type;
+
+# persist
+type persist_subsys_file, vendor_persist_type, file_type;
+
+# ultrasound
+type ultrasound_device, dev_type;
+
+# iio sysfs
+type vendor_sysfs_iio, fs_type, sysfs_type;
