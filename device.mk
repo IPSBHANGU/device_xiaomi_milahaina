@@ -161,8 +161,11 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Health
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/healthd-ext
+
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
 
 # HIDL
