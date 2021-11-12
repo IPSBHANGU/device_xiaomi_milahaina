@@ -888,7 +888,6 @@ vendor/etc/mdss_dsi_k11_38_08_0a_dsc_cmd_mi.xml
 vendor/etc/qdcm_calib_data_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
 
 # Display (OSS)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libclient2slpi.notifier.so
 vendor/lib64/libdrmutils.so
