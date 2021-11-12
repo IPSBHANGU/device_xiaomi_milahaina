@@ -294,7 +294,7 @@
         <item>971.4</item>
         <item>985.7</item>
         <item>1000.0</item>
-    </integer-array>
+    </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_autoBrightnessLcdBacklightValues array.-->
@@ -408,7 +408,7 @@
         <item>4095</item>
         <item>4095</item>
         <item>4095</item>
-    </array>
+    </integer-array>
 
     <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
          values by calculating the index to use for lookup and then setting the constraint value
