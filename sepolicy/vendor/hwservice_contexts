@@ -5,9 +5,6 @@ vendor.xiaomi.hardware.citsensorservice::ICitSensorService            u:object_r
 vendor.pixelworks.hardware.display::IIris           u:object_r:hal_display_iris_hwservice:s0
 vendor.pixelworks.hardware.feature::IIrisFeature    u:object_r:hal_display_iris_hwservice:s0
 
-# Display Feature
-vendor.xiaomi.hardware.displayfeature::IDisplayFeature                        u:object_r:hal_displayfeature_hwservice:s0
-
 # Fingerprint
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon    u:object_r:hal_fingerprint_hwservice:s0
 

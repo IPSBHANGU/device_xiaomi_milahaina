@@ -892,9 +892,6 @@ vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libclient2slpi.notifier.so
 vendor/lib64/libdrmutils.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
 
 # IPA
 vendor/etc/init/ipa_fws.rc
@@ -1930,23 +1927,3 @@ vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1_vendor.so
-
-# Xiaomi-display-feature
-lib/vendor.xiaomi.hardware.displayfeature@1.0.so
-lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
--vendor/bin/displayfeature
-vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
-vendor/lib/hw/displayfeature.default.so
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib/libdisplayfeature.so
-vendor/lib/libdisplayfeatureservice.so
-vendor/lib/libmiXmlParser.so
-vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
-vendor/lib64/hw/displayfeature.default.so
-vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib64/libdisplayfeature.so
-vendor/lib64/libdisplayfeatureservice.so
-vendor/lib64/libmi-stc-HW-modulate.so
-vendor/lib64/libmiXmlParser.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so

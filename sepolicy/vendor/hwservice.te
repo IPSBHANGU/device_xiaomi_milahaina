@@ -3,8 +3,5 @@ type hal_citsensorservice_hwservice, hwservice_manager_type;
 # Display (Pixelworks)
 type hal_display_iris_hwservice, hwservice_manager_type;
 
-# Display Feature
-type hal_displayfeature_hwservice, hwservice_manager_type;
-
 # Mlipay
 type hal_mlipay_hwservice, hwservice_manager_type;
