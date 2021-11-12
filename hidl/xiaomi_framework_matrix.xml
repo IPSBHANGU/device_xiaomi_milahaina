@@ -3,14 +3,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <compatibility-matrix version="2.0" type="framework">
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.citsensorservice</name>
-        <version>1.1</version>
-        <interface>
-            <name>ICitSensorService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- Camera -->
     <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.cameraperf</name>

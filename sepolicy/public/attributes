@@ -1,5 +1,2 @@
-# Citsensorservice
-hal_attribute(citsensorservice)
-
 # Mlipay
 hal_attribute(mlipay)
