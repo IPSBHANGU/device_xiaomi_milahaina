@@ -418,4 +418,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-qcom \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    vendor.qti.hardware.wifi.hostapd@1.2 \
+    vendor.qti.hardware.wifi.supplicant@2.2
