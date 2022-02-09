@@ -1,2 +1,7 @@
 # Mlipay
-hal_attribute(mlipay)
+attribute hal_mlipay;
+expandattribute hal_mlipay true;
+attribute hal_mlipay_client;
+expandattribute hal_mlipay_client true;
+attribute hal_mlipay_server;
+expandattribute hal_mlipay_server false;

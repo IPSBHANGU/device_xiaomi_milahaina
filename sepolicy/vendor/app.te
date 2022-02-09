@@ -1,0 +1,1 @@
+allow { appdomain -isolated_app -ephemeral_app -mediaprovider -untrusted_app_27 -untrusted_app -untrusted_app_25 -untrusted_app_29 -runas_app } hal_mlipay_hwservice:hwservice_manager find;
